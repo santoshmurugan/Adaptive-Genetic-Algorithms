@@ -2,6 +2,8 @@
 ----------------------------------------------------------------------------------------------------------
 Usage: 
 
+There are two python files that can be run. GAWindmill_Tracking.py contains plotting functionality - over 100 runs, it will compare the results achieved by the modified genetic algorithms versus the baseline. GAWindmill_PreTracking.py does not contain the plotting functionality, and is a more bare-bones implementation. Both can be run with the same command-line flags.
+
 The following command-line modifiers/flags are available:  <br />
 --crossover_probability: decimal between 0 and 1, dictates how chromosomes perform crossover. Default is 0.3. <br />
 --starting_mutation_probability: decimal between 0 and 1, dictates how individual chromosomes can mutate. Default is 0.5. <br />
@@ -12,12 +14,12 @@ The following command-line modifiers/flags are available:  <br />
 
 For further explanation, please see the description below.
 
+(The original genetic algorithms framework, PyEasyGA, can be found at https://github.com/remiomosowon/pyeasyga. Any code originally from there belongs to the owner of that repository).
+
 ----------------------------------------------------------------------------------------------------------
 Description: 
 
 This repository contains code for an improved genetic algorithms framework, using biologically inspired modifications. The code outperforms the baseline genetic algorithms framework by an average of 750 fitness points (~7%) on a windmill farm layout optimization task (proof-of-concept).
-
-(The original genetic algorithms framework, PyEasyGA, can be found at https://github.com/remiomosowon/pyeasyga. Any code originally from there belongs to the owner of that repository).
 
 We improve the performance of the genetic algorithm in two ways. First, we use an adaptive mutation rate, which is inversely proportional to the number of generations already created by the genetic algorithm. This way, later generations will have a lower mutation rate, potentially accelerating model convergence.  
 
