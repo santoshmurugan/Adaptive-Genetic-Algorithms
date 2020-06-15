@@ -2,20 +2,22 @@
 ----------------------------------------------------------------------------------------------------------
 Usage: 
 
-The following command-line modifiers/flags are available:
---crossover_probability: decimal between 0 and 1, dictates how chromosomes perform crossover. Default is 0.3.
---starting_mutation_probability: decimal between 0 and 1, dictates how individual chromosomes can mutate. Default is 0.5.
---adaptive_mutation_factor: decimal for how much to multiply mutation rate per generation. Default is 0.2.
---clipping_threshold: decimal between 0 and 1 at which clipping is performed. Default is 0.9
---turbines: integer number of turbines to start with. Default is 10.
---grid_size: perfect square integer representing grid size (e.g. 6x6 is 36). Default is 36.
+The following command-line modifiers/flags are available:  <br />
+--crossover_probability: decimal between 0 and 1, dictates how chromosomes perform crossover. Default is 0.3. <br />
+--starting_mutation_probability: decimal between 0 and 1, dictates how individual chromosomes can mutate. Default is 0.5. <br />
+--adaptive_mutation_factor: decimal for how much to multiply mutation rate per generation. Default is 0.2. <br />
+--clipping_threshold: decimal between 0 and 1 at which clipping is performed. Default is 0.9. <br />
+--turbines: integer number of turbines to start with. Default is 10. <br />
+--grid_size: perfect square integer representing grid size (e.g. 6x6 is 36). Default is 36. <br />
 
 For further explanation, please see the description below.
 
 ----------------------------------------------------------------------------------------------------------
 Description: 
 
-This repository contains code for an improved genetic algorithms framework, using biologically inspired modifications. (The original genetic algorithms framework, PyEasyGA, can be found at https://github.com/remiomosowon/pyeasyga. Any code originally from there belongs to the owner of that repository).
+This repository contains code for an improved genetic algorithms framework, using biologically inspired modifications. The code outperforms the baseline genetic algorithms framework by an average of 750 fitness points (~7%) on a windmill farm layout optimization task (proof-of-concept).
+
+(The original genetic algorithms framework, PyEasyGA, can be found at https://github.com/remiomosowon/pyeasyga. Any code originally from there belongs to the owner of that repository).
 
 We improve the performance of the genetic algorithm in two ways. First, we use an adaptive mutation rate, which is inversely proportional to the number of generations already created by the genetic algorithm. This way, later generations will have a lower mutation rate, potentially accelerating model convergence.  
 
