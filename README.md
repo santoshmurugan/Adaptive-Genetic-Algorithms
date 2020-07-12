@@ -1,22 +1,5 @@
 # Adaptive-Genetic-Algorithms
-----------------------------------------------------------------------------------------------------------
-Usage: 
 
-There are two python files that can be run. GAWindmill_Tracking.py contains plotting functionality - over 100 runs, it will compare the results achieved by the modified genetic algorithms versus the baseline. GAWindmill_PreTracking.py does not contain the plotting functionality, and is a more bare-bones implementation. Both can be run with the same command-line flags.
-
-The following command-line modifiers/flags are available:  <br />
---crossover_probability: decimal between 0 and 1, dictates how chromosomes perform crossover. Default is 0.3. <br />
---starting_mutation_probability: decimal between 0 and 1, dictates how individual chromosomes can mutate. Default is 0.5. <br />
---adaptive_mutation_factor: decimal for how much to multiply mutation rate per generation. Default is 0.2. <br />
---clipping_threshold: decimal between 0 and 1 at which clipping is performed. Default is 0.9. <br />
---turbines: integer number of turbines to start with. Default is 10. <br />
---grid_size: perfect square integer representing grid size (e.g. 6x6 is 36). Default is 36. <br />
-
-For further explanation, please see the description below.
-
-(The original genetic algorithms framework, PyEasyGA, can be found at https://github.com/remiomosowon/pyeasyga. Any code originally from there belongs to the owner of that repository).
-
-----------------------------------------------------------------------------------------------------------
 Description: 
 
 This repository contains code for an improved genetic algorithms framework, using biologically inspired modifications. The code outperforms the baseline genetic algorithms framework by an average of 750 fitness points (~7%) on a windmill farm layout optimization task (proof-of-concept).
@@ -36,3 +19,23 @@ Taken together, the adaptive mutation and adaptive crossover rates (parent-weigh
 We provide a proof of concept, in which we apply our modified genetic algorithms to the task of Windmill Farm Layout Optimization. Over 100 runs, with a 6x6 windfarm (i.e. 36 potential spots for windmills), our improved genetic algorithms consistently outperform the original genetic algorithms framework by 750 fitness points (approximately 7%). (Calculations of fitness are derived from equations in Mosetti et al.'s original windfarm optimization paper- source provided upon request).
 
 (Developed by Santosh Murugan (Stanford, Artificial Intelligence) and Andy Kim (Stanford, Aero/Astro) - any questions can be directed to smurugan AT stanford DOT edu).
+
+----------------------------------------------------------------------------------------------------------
+Usage: 
+
+There are two python files that can be run. GAWindmill_Tracking.py contains plotting functionality - over 100 runs, it will compare the results achieved by the modified genetic algorithms versus the baseline. GAWindmill_PreTracking.py does not contain the plotting functionality, and is a more bare-bones implementation. Both can be run with the same command-line flags.
+
+The following command-line modifiers/flags are available:  <br />
+--crossover_probability: decimal between 0 and 1, dictates how chromosomes perform crossover. Default is 0.3. <br />
+--starting_mutation_probability: decimal between 0 and 1, dictates how individual chromosomes can mutate. Default is 0.5. <br />
+--adaptive_mutation_factor: decimal for how much to multiply mutation rate per generation. Default is 0.2. <br />
+--clipping_threshold: decimal between 0 and 1 at which clipping is performed. Default is 0.9. <br />
+--turbines: integer number of turbines to start with. Default is 10. <br />
+--grid_size: perfect square integer representing grid size (e.g. 6x6 is 36). Default is 36. <br />
+
+For further explanation, please see the description below.
+
+(The original genetic algorithms framework, PyEasyGA, can be found at https://github.com/remiomosowon/pyeasyga. Any code originally from there belongs to the owner of that repository).
+
+----------------------------------------------------------------------------------------------------------
+
